@@ -14633,7 +14633,7 @@ bianca.fagundes@academico.ufpb.br</p>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1">#Realizo o tratamento da tabela para substituir todos os valores diferentes de 0 por 1, já que alguns dos valores 1 continham comentários ao lado e precisam ser substituídos apenas pelo valor 1</span>
-<span class="n">tabela_relatorios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;relatorios.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+<span class="n">tabela_relatorios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;relatorios.csv&quot;</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span> <span class="p">,</span><span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
 <span class="n">tabela_relatorios</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_relatorios</span><span class="p">[</span><span class="s2">&quot;a. Questões de Auditoria&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;a. Questões de Auditoria&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tabela_relatorios</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_relatorios</span><span class="p">[</span><span class="s2">&quot;b. Subquestões de Auditoria&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;b. Subquestões de Auditoria&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tabela_relatorios</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_relatorios</span><span class="p">[</span><span class="s2">&quot;c. Descrição sumária&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;c. Descrição sumária&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -14728,14 +14728,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
     </tr>
@@ -14752,14 +14752,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1.0</td>
       <td>0</td>
       <td>0</td>
-      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
     </tr>
@@ -14776,14 +14776,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>1</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -14800,14 +14800,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1.0</td>
       <td>0</td>
       <td>0</td>
-      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
     </tr>
@@ -14824,14 +14824,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>1</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -14848,14 +14848,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>1</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -14872,14 +14872,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>1</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -14896,14 +14896,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>1</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -14920,14 +14920,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>1</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -14944,14 +14944,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -15898,14 +15898,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>6.82</td>
       <td>77.27</td>
       <td>52.27</td>
-      <td>100.0</td>
+      <td>97.73</td>
       <td>90.91</td>
       <td>70.45</td>
       <td>45.45</td>
-      <td>100.0</td>
+      <td>11.36</td>
       <td>2.27</td>
       <td>56.82</td>
-      <td>100.0</td>
+      <td>9.09</td>
       <td>65.91</td>
       <td>100.00</td>
     </tr>
@@ -15917,14 +15917,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>22.08</td>
       <td>81.82</td>
       <td>55.84</td>
-      <td>100.0</td>
+      <td>98.70</td>
       <td>93.51</td>
       <td>87.01</td>
       <td>53.25</td>
-      <td>100.0</td>
+      <td>1.30</td>
       <td>2.60</td>
       <td>71.43</td>
-      <td>100.0</td>
+      <td>3.90</td>
       <td>77.92</td>
       <td>100.00</td>
     </tr>
@@ -15936,14 +15936,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>5.56</td>
       <td>77.78</td>
       <td>51.85</td>
-      <td>100.0</td>
+      <td>96.30</td>
       <td>68.52</td>
       <td>57.41</td>
       <td>44.44</td>
-      <td>100.0</td>
+      <td>7.41</td>
       <td>7.41</td>
       <td>46.30</td>
-      <td>100.0</td>
+      <td>11.11</td>
       <td>64.81</td>
       <td>94.44</td>
     </tr>
@@ -15955,14 +15955,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>30.77</td>
       <td>53.85</td>
       <td>65.38</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>92.31</td>
       <td>84.62</td>
       <td>50.00</td>
-      <td>100.0</td>
+      <td>11.54</td>
       <td>11.54</td>
       <td>57.69</td>
-      <td>100.0</td>
+      <td>11.54</td>
       <td>73.08</td>
       <td>100.00</td>
     </tr>
@@ -15974,14 +15974,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>7.73</td>
       <td>71.27</td>
       <td>35.36</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>82.32</td>
       <td>72.38</td>
       <td>25.41</td>
-      <td>100.0</td>
+      <td>9.94</td>
       <td>6.08</td>
       <td>24.31</td>
-      <td>100.0</td>
+      <td>7.18</td>
       <td>69.06</td>
       <td>100.00</td>
     </tr>
@@ -15993,14 +15993,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>6.96</td>
       <td>84.35</td>
       <td>40.00</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>93.91</td>
       <td>84.35</td>
       <td>38.26</td>
-      <td>100.0</td>
+      <td>13.04</td>
       <td>8.70</td>
       <td>47.83</td>
-      <td>100.0</td>
+      <td>9.57</td>
       <td>69.57</td>
       <td>99.13</td>
     </tr>
@@ -16012,14 +16012,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>17.37</td>
       <td>91.18</td>
       <td>64.15</td>
-      <td>100.0</td>
+      <td>98.88</td>
       <td>88.94</td>
       <td>78.29</td>
       <td>50.00</td>
-      <td>100.0</td>
+      <td>21.01</td>
       <td>23.25</td>
       <td>82.35</td>
-      <td>100.0</td>
+      <td>16.25</td>
       <td>75.07</td>
       <td>98.18</td>
     </tr>
@@ -16031,14 +16031,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>14.47</td>
       <td>63.16</td>
       <td>47.37</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>84.21</td>
       <td>76.97</td>
       <td>30.92</td>
-      <td>100.0</td>
+      <td>13.16</td>
       <td>10.53</td>
       <td>46.05</td>
-      <td>100.0</td>
+      <td>10.53</td>
       <td>68.42</td>
       <td>100.00</td>
     </tr>
@@ -16050,14 +16050,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>10.65</td>
       <td>85.65</td>
       <td>32.41</td>
-      <td>100.0</td>
+      <td>99.07</td>
       <td>84.26</td>
       <td>70.37</td>
       <td>31.02</td>
-      <td>100.0</td>
+      <td>9.72</td>
       <td>6.02</td>
       <td>33.80</td>
-      <td>100.0</td>
+      <td>8.80</td>
       <td>63.89</td>
       <td>99.54</td>
     </tr>
@@ -16069,14 +16069,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>2.27</td>
       <td>72.73</td>
       <td>34.09</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>90.91</td>
       <td>84.09</td>
       <td>27.27</td>
-      <td>100.0</td>
+      <td>4.55</td>
       <td>2.27</td>
       <td>25.00</td>
-      <td>100.0</td>
+      <td>4.55</td>
       <td>54.55</td>
       <td>100.00</td>
     </tr>
@@ -16088,14 +16088,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>6.95</td>
       <td>89.74</td>
       <td>38.41</td>
-      <td>100.0</td>
+      <td>99.34</td>
       <td>75.17</td>
       <td>62.25</td>
       <td>34.44</td>
-      <td>100.0</td>
+      <td>8.94</td>
       <td>4.97</td>
       <td>44.04</td>
-      <td>100.0</td>
+      <td>5.30</td>
       <td>64.90</td>
       <td>99.67</td>
     </tr>
@@ -16107,14 +16107,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>13.21</td>
       <td>72.64</td>
       <td>50.94</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>89.62</td>
       <td>81.13</td>
       <td>41.51</td>
-      <td>100.0</td>
+      <td>7.55</td>
       <td>4.72</td>
       <td>38.68</td>
-      <td>100.0</td>
+      <td>5.66</td>
       <td>71.70</td>
       <td>100.00</td>
     </tr>
@@ -16126,14 +16126,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>4.55</td>
       <td>84.09</td>
       <td>38.64</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>93.18</td>
       <td>75.00</td>
       <td>34.09</td>
-      <td>100.0</td>
+      <td>11.36</td>
       <td>11.36</td>
       <td>47.73</td>
-      <td>100.0</td>
+      <td>6.82</td>
       <td>75.00</td>
       <td>100.00</td>
     </tr>
@@ -16145,14 +16145,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>7.45</td>
       <td>87.58</td>
       <td>43.48</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>82.61</td>
       <td>77.64</td>
       <td>40.37</td>
-      <td>100.0</td>
+      <td>6.21</td>
       <td>9.94</td>
       <td>42.24</td>
-      <td>100.0</td>
+      <td>8.07</td>
       <td>72.05</td>
       <td>100.00</td>
     </tr>
@@ -16164,14 +16164,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>10.81</td>
       <td>78.38</td>
       <td>33.78</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>86.49</td>
       <td>78.38</td>
       <td>50.00</td>
-      <td>100.0</td>
+      <td>10.81</td>
       <td>8.11</td>
       <td>44.59</td>
-      <td>100.0</td>
+      <td>10.81</td>
       <td>79.73</td>
       <td>97.30</td>
     </tr>
@@ -16183,14 +16183,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>13.16</td>
       <td>85.79</td>
       <td>43.68</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>90.53</td>
       <td>84.21</td>
       <td>50.00</td>
-      <td>100.0</td>
+      <td>10.53</td>
       <td>11.05</td>
       <td>50.53</td>
-      <td>100.0</td>
+      <td>10.00</td>
       <td>71.58</td>
       <td>99.47</td>
     </tr>
@@ -16202,14 +16202,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>4.96</td>
       <td>90.91</td>
       <td>28.10</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>97.52</td>
       <td>80.17</td>
       <td>21.49</td>
-      <td>100.0</td>
+      <td>3.31</td>
       <td>2.48</td>
       <td>24.79</td>
-      <td>100.0</td>
+      <td>3.31</td>
       <td>63.64</td>
       <td>100.00</td>
     </tr>
@@ -16221,14 +16221,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>8.44</td>
       <td>75.95</td>
       <td>43.04</td>
-      <td>100.0</td>
+      <td>99.16</td>
       <td>91.98</td>
       <td>78.48</td>
       <td>43.04</td>
-      <td>100.0</td>
+      <td>6.75</td>
       <td>4.22</td>
       <td>45.57</td>
-      <td>100.0</td>
+      <td>5.91</td>
       <td>62.03</td>
       <td>99.58</td>
     </tr>
@@ -16240,14 +16240,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>3.90</td>
       <td>74.55</td>
       <td>44.42</td>
-      <td>100.0</td>
+      <td>99.74</td>
       <td>86.49</td>
       <td>74.55</td>
       <td>50.65</td>
-      <td>100.0</td>
+      <td>6.23</td>
       <td>8.05</td>
       <td>68.31</td>
-      <td>100.0</td>
+      <td>4.68</td>
       <td>72.21</td>
       <td>99.74</td>
     </tr>
@@ -16259,14 +16259,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>12.50</td>
       <td>78.12</td>
       <td>34.38</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>87.50</td>
       <td>73.44</td>
       <td>34.38</td>
-      <td>100.0</td>
+      <td>14.06</td>
       <td>12.50</td>
       <td>40.62</td>
-      <td>100.0</td>
+      <td>10.94</td>
       <td>71.88</td>
       <td>100.00</td>
     </tr>
@@ -16278,14 +16278,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>12.77</td>
       <td>77.30</td>
       <td>44.68</td>
-      <td>100.0</td>
+      <td>99.29</td>
       <td>90.07</td>
       <td>76.60</td>
       <td>34.04</td>
-      <td>100.0</td>
+      <td>2.84</td>
       <td>4.96</td>
       <td>37.59</td>
-      <td>100.0</td>
+      <td>2.13</td>
       <td>73.05</td>
       <td>100.00</td>
     </tr>
@@ -16297,14 +16297,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>20.00</td>
       <td>90.00</td>
       <td>52.50</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>82.50</td>
       <td>77.50</td>
       <td>40.00</td>
-      <td>100.0</td>
+      <td>10.00</td>
       <td>7.50</td>
       <td>52.50</td>
-      <td>100.0</td>
+      <td>10.00</td>
       <td>77.50</td>
       <td>100.00</td>
     </tr>
@@ -16316,14 +16316,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>9.09</td>
       <td>86.36</td>
       <td>43.18</td>
-      <td>100.0</td>
+      <td>97.73</td>
       <td>95.45</td>
       <td>90.91</td>
       <td>36.36</td>
-      <td>100.0</td>
+      <td>9.09</td>
       <td>6.82</td>
       <td>63.64</td>
-      <td>100.0</td>
+      <td>6.82</td>
       <td>68.18</td>
       <td>100.00</td>
     </tr>
@@ -16335,14 +16335,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>11.36</td>
       <td>84.09</td>
       <td>42.05</td>
-      <td>100.0</td>
+      <td>99.43</td>
       <td>80.11</td>
       <td>62.50</td>
       <td>32.39</td>
-      <td>100.0</td>
+      <td>6.25</td>
       <td>5.68</td>
       <td>32.95</td>
-      <td>100.0</td>
+      <td>5.68</td>
       <td>68.75</td>
       <td>98.86</td>
     </tr>
@@ -16354,14 +16354,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>12.50</td>
       <td>85.16</td>
       <td>32.03</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>90.62</td>
       <td>67.19</td>
       <td>36.72</td>
-      <td>100.0</td>
+      <td>13.28</td>
       <td>11.72</td>
       <td>41.41</td>
-      <td>100.0</td>
+      <td>12.50</td>
       <td>71.09</td>
       <td>100.00</td>
     </tr>
@@ -16373,14 +16373,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>7.58</td>
       <td>76.17</td>
       <td>31.05</td>
-      <td>100.0</td>
+      <td>99.64</td>
       <td>88.81</td>
       <td>76.17</td>
       <td>27.80</td>
-      <td>100.0</td>
+      <td>4.69</td>
       <td>3.61</td>
       <td>39.71</td>
-      <td>100.0</td>
+      <td>3.97</td>
       <td>66.06</td>
       <td>100.00</td>
     </tr>
@@ -16392,14 +16392,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>15.00</td>
       <td>75.00</td>
       <td>47.50</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>87.50</td>
       <td>67.50</td>
       <td>32.50</td>
-      <td>100.0</td>
+      <td>17.50</td>
       <td>20.00</td>
       <td>42.50</td>
-      <td>100.0</td>
+      <td>17.50</td>
       <td>62.50</td>
       <td>100.00</td>
     </tr>
@@ -16625,14 +16625,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>11.53</td>
       <td>80.71</td>
       <td>45.82</td>
-      <td>100.0</td>
+      <td>99.45</td>
       <td>85.64</td>
       <td>74.02</td>
       <td>45.36</td>
-      <td>100.0</td>
+      <td>11.13</td>
       <td>10.81</td>
       <td>57.21</td>
-      <td>100.0</td>
+      <td>8.65</td>
       <td>70.99</td>
       <td>99.57</td>
     </tr>
@@ -16644,14 +16644,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>50.00</td>
       <td>100.00</td>
       <td>50.00</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>75.00</td>
       <td>75.00</td>
       <td>100.00</td>
-      <td>100.0</td>
+      <td>75.00</td>
       <td>50.00</td>
       <td>50.00</td>
-      <td>100.0</td>
+      <td>50.00</td>
       <td>50.00</td>
       <td>100.00</td>
     </tr>
@@ -16663,14 +16663,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>4.53</td>
       <td>87.74</td>
       <td>37.23</td>
-      <td>100.0</td>
+      <td>99.71</td>
       <td>92.41</td>
       <td>78.39</td>
       <td>14.31</td>
-      <td>100.0</td>
+      <td>8.61</td>
       <td>6.57</td>
       <td>21.90</td>
-      <td>100.0</td>
+      <td>5.99</td>
       <td>71.24</td>
       <td>99.27</td>
     </tr>
@@ -16682,14 +16682,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>8.33</td>
       <td>83.33</td>
       <td>58.33</td>
-      <td>100.0</td>
+      <td>83.33</td>
       <td>100.00</td>
       <td>50.00</td>
       <td>16.67</td>
-      <td>100.0</td>
+      <td>25.00</td>
       <td>16.67</td>
       <td>25.00</td>
-      <td>100.0</td>
+      <td>16.67</td>
       <td>16.67</td>
       <td>50.00</td>
     </tr>
@@ -16915,14 +16915,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>6.84</td>
       <td>61.27</td>
       <td>45.94</td>
-      <td>100.0</td>
+      <td>99.52</td>
       <td>89.96</td>
       <td>85.26</td>
       <td>37.82</td>
-      <td>100.0</td>
+      <td>0.59</td>
       <td>1.18</td>
       <td>42.90</td>
-      <td>100.0</td>
+      <td>0.91</td>
       <td>70.99</td>
       <td>99.47</td>
     </tr>
@@ -16934,14 +16934,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>4.37</td>
       <td>98.10</td>
       <td>31.51</td>
-      <td>100.0</td>
+      <td>99.05</td>
       <td>83.33</td>
       <td>62.54</td>
       <td>36.90</td>
-      <td>100.0</td>
+      <td>9.84</td>
       <td>6.03</td>
       <td>48.89</td>
-      <td>100.0</td>
+      <td>5.40</td>
       <td>64.84</td>
       <td>98.97</td>
     </tr>
@@ -16953,14 +16953,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>4.63</td>
       <td>99.28</td>
       <td>45.30</td>
-      <td>100.0</td>
+      <td>99.71</td>
       <td>80.90</td>
       <td>64.40</td>
       <td>37.34</td>
-      <td>100.0</td>
+      <td>12.88</td>
       <td>12.59</td>
       <td>59.62</td>
-      <td>100.0</td>
+      <td>6.22</td>
       <td>70.77</td>
       <td>99.57</td>
     </tr>
@@ -16972,14 +16972,14 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>63.85</td>
       <td>100.00</td>
       <td>81.92</td>
-      <td>100.0</td>
+      <td>100.00</td>
       <td>93.88</td>
       <td>81.92</td>
       <td>71.14</td>
-      <td>100.0</td>
+      <td>66.18</td>
       <td>69.68</td>
       <td>89.21</td>
-      <td>100.0</td>
+      <td>63.27</td>
       <td>92.42</td>
       <td>100.00</td>
     </tr>
