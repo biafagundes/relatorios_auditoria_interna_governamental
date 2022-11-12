@@ -15827,7 +15827,9 @@ bianca.fagundes@academico.ufpb.br</p>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">array_tabelas_estados</span><span class="p">:</span>
     <span class="n">porcentagem_criterios_estado_aux</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">porcentagem_criterios_estado</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="c1">#Roda para todos os estados e adiciona à tabela auxiliar de porcentagem dos critérios</span>
 
-
+<span class="n">porcentagem_criterios_estado_aux</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">porcentagem_criterios_estado</span><span class="p">(</span><span class="n">tabela_relatorios</span><span class="p">))</span>
+<span class="n">indice</span> <span class="o">=</span> <span class="n">array_estados</span>
+<span class="n">indice</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;Total&quot;</span><span class="p">])</span>
 <span class="n">porcentagens_criterios_por_estado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">porcentagem_criterios_estado_aux</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">array_estados</span><span class="p">)</span>
 <span class="n">porcentagens_criterios_por_estado</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;criterios_por_estado.xlsx&#39;</span><span class="p">)</span>
 
@@ -16402,6 +16404,25 @@ bianca.fagundes@academico.ufpb.br</p>
       <td>17.50</td>
       <td>62.50</td>
       <td>100.00</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Total</td>
+      <td>0.0</td>
+      <td>36.22</td>
+      <td>10.41</td>
+      <td>81.89</td>
+      <td>44.45</td>
+      <td>99.45</td>
+      <td>86.78</td>
+      <td>74.67</td>
+      <td>40.23</td>
+      <td>10.82</td>
+      <td>10.17</td>
+      <td>51.31</td>
+      <td>8.28</td>
+      <td>70.86</td>
+      <td>99.38</td>
     </tr>
   </tbody>
 </table>
